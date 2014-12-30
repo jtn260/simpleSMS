@@ -1,0 +1,16 @@
+<?php
+
+$people = array('827-222' => "Uber");
+
+if(!$name = $people[$_REQUEST['From']]) {
+	$name = 'booger';
+}
+
+header('content-type: text/xml');
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+?>
+<Response>
+	<Sms><?php echo $name; ?>, I am your father! </Sms>
+
+<Response>
+	
